@@ -1,0 +1,29 @@
+Used Database is postgreSQL
+
+We have create database and Table before test this project.
+
+step 1: Download and install postgreSQL
+step 2: Create dataBase named posgres (it's already exists when we open pgAdmin
+step 3: Create table named HotelDB
+
+        -- Table: public.HotelDB
+
+        CREATE TABLE IF NOT EXISTS public."HotelDB"
+        (
+            "ID" integer NOT NULL DEFAULT nextval('"HotelDB_ID_seq"'::regclass),
+            "GuestName" character varying(255) COLLATE pg_catalog."default" NOT NULL,
+            "RoomNo" integer NOT NULL,
+            "RoomType" character varying(10) COLLATE pg_catalog."default" NOT NULL,
+            "Contact" character varying(25) COLLATE pg_catalog."default" NOT NULL,
+            "Email" character varying(255) COLLATE pg_catalog."default",
+            "CheckIn" date NOT NULL,
+            "CheckOut" date NOT NULL,
+            "NoOfDays" integer NOT NULL,
+            "Price" money NOT NULL,
+            CONSTRAINT "HotelDB_pkey" PRIMARY KEY ("ID")
+        )
+
+        Note :- above all are column names
+
+step 4: Now, we can test the project...
+
